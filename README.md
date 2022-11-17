@@ -30,7 +30,7 @@ registrySources:
 ```
 :warning: ``WARNING!!! AFTER EDIT THIS RESOURCE  YOU NEED TO WAIT FOR MCP!!!``
 ### 3. Deploy consul using helm
-Create yaml configuration with name values.yaml(more explanation [values.yaml](consul/values.yaml)):
+Create yaml configuration with name values.yaml(more explanation for [values.yaml](consul/)):
 ```
 global:
   name: consul
@@ -150,6 +150,7 @@ For more information, go to [consul-ui](consul/)
 
 ### 6. Deploy example service for service mesh
 Create new project ``demo-consul``. Create ``web.yaml`` and ``api.yaml``
+
 More explanation for web.yaml and api.yaml [here](demo-consul/)
 
 ``web.yaml``
