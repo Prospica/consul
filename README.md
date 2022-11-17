@@ -28,7 +28,7 @@ registrySources:
   - registry.redhat.io
   - registry.connect.redhat.com
 ```
-``:warning: WARNING!!! AFTER EDIT THIS RESOURCE  YOU NEED TO WAIT FOR MCP!!!``
+:warning: ``WARNING!!! AFTER EDIT THIS RESOURCE  YOU NEED TO WAIT FOR MCP!!!``
 ### 3. Deploy consul using helm
 Create yaml configuration with name values.yaml(more explanation [values.yaml](consul/values.yaml)):
 ```
