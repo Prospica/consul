@@ -28,7 +28,7 @@ registrySources:
   - registry.redhat.io
   - registry.connect.redhat.com
 ```
-:warning: ``WARNING!!! AFTER EDIT THIS RESOURCE  YOU NEED TO WAIT FOR MCP!!!``
+``:warning: WARNING!!! AFTER EDIT THIS RESOURCE  YOU NEED TO WAIT FOR MCP!!!``
 ### 3. Deploy consul using helm
 Create yaml configuration with name values.yaml(more explanation [values.yaml](consul/values.yaml)):
 ```
@@ -109,7 +109,7 @@ Thank you for installing HashiCorp Consul!
 Your release is named consul.
 ```
 ### 4. Verify installation
-Open openshift web console, than see pods at consul namepspace. There should be consul pods simillar to following:
+Open openshift web console, than see pods at consul namespace. There should be consul pods simillar to following:
 
 ![consul-pods](images/consul-pods.PNG)
 
@@ -146,12 +146,13 @@ Open consul web UI via openshift route
 
 ![consul-ui](images/consul-ui.PNG)
 
-For more information, go to [consul-ui](consul/consul-ui.md)
+For more information, go to [consul-ui](consul/)
 
 ### 6. Deploy example service for service mesh
 Create new project ``demo-consul``. Create ``web.yaml`` and ``api.yaml``
-More explanation [web.yaml](demo-consul/web.yaml) and [api.yaml](demo-consul/api.yaml)
-web.yaml
+More explanation for web.yaml and api.yaml [here](demo-consul/)
+
+``web.yaml``
 ```
 apiVersion: v1
 kind: ServiceAccount
@@ -204,7 +205,7 @@ spec:
               value: 'Hello World'
 ```
 
-api.yaml
+``api.yaml``
 ```
 apiVersion: v1
 kind: ServiceAccount
