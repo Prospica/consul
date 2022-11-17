@@ -1,0 +1,49 @@
+global:
+  name: consul
+  datacenter: dc1
+  image: registry.connect.redhat.com/hashicorp/consul:1.13.2-ubi
+  imageK8S: registry.connect.redhat.com/hashicorp/consul-k8s-control-plane:0.49.0-ubi
+  imagePullSecrets:
+    - name: 15156148-consul-pull-secret
+  openshift:
+    enabled: true
+  gossipEncryption:
+    autoGenerate: true
+  metrics:
+    enabled: true
+    enableAgentMetrics: true
+    agentMetricsRetentionTime: "1m"
+
+server:
+  replicas: 1
+  bootstrapExpect: 1
+  disruptionBudget:
+    enabled: true
+    maxUnavailable: 0
+
+client:
+  enabled: true
+  grpc: true
+
+ui:
+  enabled: true
+  metrics:
+    enabled: true
+    provider: "prometheus"
+    baseURL: http://prometheus-server
+
+connectInject:
+  enabled: true
+  default: false
+  transparentProxy:
+    defaultEnabled: true
+  metrics:
+    defaultPrometheusScrapePort: 20200
+    defaultPrometheusScrapePath: "/metrics"
+    defaultMergedMetricsPort: 20100
+
+controller:
+  enabled: true
+
+prometheus:
+  enabled: true
