@@ -43,7 +43,7 @@ Same like before, we want web pod to be able communicate with database pod using
 
 1.  Configure Upstream Config in web pod. Add this annotations ``consul.hashicorp.com/connect-service-upstreams: '<service-name>:<chosen-port>'``
 2.  Make sure database pod can only be access from loopback interface (127.0.0.1). We need to configure this, because consul don't force inbound and outbound traffic in services through sidecar proxy.
-3.  Make web pod call database service using ``localhost:<chosen-port>``
+3.  Make web pod call database service using ``localhost:<chosen-port>`` 
 
 ## Explanation for Values.yaml
 ## Global
@@ -92,7 +92,7 @@ server:
 
   #To elected first consul-server
   bootstrapExpect: 1
-  
+
   #Configure PodDisruptionBudget in kubernetes
   disruptionBudget:
     enabled: true

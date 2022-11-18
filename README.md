@@ -146,8 +146,6 @@ Open consul web UI via openshift route
 
 ![consul-ui](images/consul-ui.PNG)
 
-For more information, go to [consul-ui](consul/)
-
 ### 6. Deploy example service for service mesh
 Create new project ``demo-consul``. Create ``web.yaml`` and ``api.yaml``
 
